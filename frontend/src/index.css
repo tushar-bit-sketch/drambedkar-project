@@ -1,0 +1,425 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Reset: Institutional default with targeted accents */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:where(*):not([class*="rounded"]) {
+  border-radius: 0px;
+}
+
+/* Typography Defaults */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'DM Sans', Inter, sans-serif;
+  letter-spacing: -0.025em;
+  font-weight: 600;
+}
+
+body {
+  font-family: Inter, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  color: #1A1714;
+  background-color: #CDB692;
+}
+
+/* Keep utility-based panels in the same warm, aged-paper palette. */
+.bg-white {
+  background-color: #E8D9C0;
+}
+
+/* 1. Core Archival Paper Primitives */
+.archival-paper {
+  background-color: #CDB692;
+  background-image: 
+    radial-gradient(ellipse at 50% 15%, rgba(245, 235, 215, 0.65) 0%, rgba(212, 190, 155, 0.7) 60%, rgba(175, 148, 110, 0.85) 100%),
+    radial-gradient(circle at 12% 20%, rgba(130, 90, 45, 0.08) 0%, transparent 25%),
+    radial-gradient(circle at 88% 80%, rgba(115, 75, 30, 0.09) 0%, transparent 28%),
+    linear-gradient(rgba(26, 23, 20, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(26, 23, 20, 0.035) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 28px 28px, 28px 28px;
+  background-attachment: fixed;
+}
+
+.archival-paper-dark {
+  background-color: #C5AD88;
+  background-image: radial-gradient(ellipse at 50% 50%, rgba(210, 185, 150, 0.5) 0%, rgba(165, 135, 95, 0.8) 100%);
+}
+
+.archival-print {
+  color: #1A1714;
+  text-shadow: 0.5px 0.5px 0px rgba(0, 0, 0, 0.18);
+}
+
+.archival-photo {
+  filter: sepia(0.18) contrast(1.1) brightness(0.96);
+  mix-blend-mode: multiply;
+}
+
+.archival-rule {
+  border-color: rgba(26, 23, 20, 0.45);
+}
+
+.archival-rule-double {
+  border-style: double;
+  border-color: #1A1714;
+}
+
+.archival-stamp {
+  background-color: #79402C; /* Sampled exactly from reference image Home button (121, 64, 44) */
+  color: #FAF4E8;
+  border: 1px solid #522718;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  font-family: 'DM Sans', Inter, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.archival-caption {
+  font-family: 'IBM Plex Mono', Consolas, monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #3D332A;
+}
+
+/* Authentic Aged Parchment & Newsprint Canvas Texture */
+.parchment-archive-bg {
+  background-color: #CDB692;
+  background-image: 
+    radial-gradient(ellipse at 50% 0%, rgba(245, 235, 215, 0.7) 0%, rgba(216, 194, 160, 0.6) 60%, rgba(175, 148, 110, 0.85) 100%),
+    radial-gradient(circle at 15% 25%, rgba(135, 95, 45, 0.08) 0%, transparent 28%),
+    radial-gradient(circle at 85% 75%, rgba(120, 80, 35, 0.09) 0%, transparent 32%),
+    linear-gradient(rgba(26, 23, 20, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(26, 23, 20, 0.03) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 32px 32px, 32px 32px;
+  background-attachment: fixed;
+}
+
+/* Aged Deckled / Burnt Paper Border Framing */
+.deckled-paper-panel {
+  background: #E8D5B5;
+  border: 1px solid #A8906B;
+  box-shadow: 
+    inset 0 0 50px rgba(130, 90, 45, 0.22),
+    inset 0 0 15px rgba(90, 60, 25, 0.15),
+    0 4px 18px rgba(45, 30, 15, 0.2);
+  position: relative;
+}
+
+/* Authentic Oxblood Stamp Pill */
+.oxblood-nav-pill {
+  background-color: #79402C;
+  color: #FFFFFF;
+  border: 1px solid #4F2416;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  font-family: 'DM Sans', Inter, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* Aged Parchment Button */
+.parchment-btn {
+  background-color: #DECBAE;
+  color: #1A1714;
+  border: 1px solid #7D6546;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  font-family: 'DM Sans', Inter, sans-serif;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+.parchment-btn:hover {
+  background-color: #D2BEA0;
+  border-color: #5E4A30;
+}
+
+/* Accent Colors */
+.text-accent { color: #6B1D1D; }
+.bg-accent { background-color: #6B1D1D; }
+.border-accent { border-color: #6B1D1D; }
+
+/* Utility: Institutional Borders */
+.border-double-ink {
+  border: 2px double #1A1714;
+}
+
+.border-single-ink {
+  border: 1px solid #1A1714;
+}
+
+/* Metadata Styles */
+.font-mono-meta {
+  font-family: 'IBM Plex Mono', Consolas, monospace;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  color: #3D332A;
+}
+
+/* Accession Tags */
+.accession-tag {
+  display: inline-block;
+  background-color: #F5E8E8;
+  color: #6B1D1D;
+  padding: 3px 8px;
+  font-family: 'IBM Plex Mono', Consolas, monospace;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Accessible focus rings */
+  :focus-visible {
+    outline: 2px solid #1A1714;
+    outline-offset: 2px;
+  }
+}
+
+/* Custom Archival Newspaper Broadsheet Utilities */
+.broadsheet-double-border {
+  border: 3px double #1A1714;
+}
+
+.broadsheet-double-border-b {
+  border-bottom: 3px double #1A1714;
+}
+
+.broadsheet-double-border-t {
+  border-top: 3px double #1A1714;
+}
+
+.broadsheet-double-border-y {
+  border-top: 3px double #1A1714;
+  border-bottom: 3px double #1A1714;
+}
+
+.broadsheet-single-border {
+  border: 1px solid rgba(26, 23, 20, 0.28);
+}
+
+.broadsheet-column-rule {
+  position: relative;
+}
+
+.broadsheet-column-rule:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: rgba(26, 23, 20, 0.22);
+}
+
+.broadsheet-hairline-b {
+  border-bottom: 1px solid rgba(26, 23, 20, 0.22);
+}
+
+.broadsheet-hairline-t {
+  border-top: 1px solid rgba(26, 23, 20, 0.22);
+}
+
+.broadsheet-hairline-r {
+  border-right: 1px solid rgba(26, 23, 20, 0.22);
+}
+
+/* Historic Newspaper Accession & Official Stamps */
+.stamp-oxblood {
+  border: 2px solid #6B1D1D;
+  color: #6B1D1D;
+  font-family: 'IBM Plex Mono', Consolas, monospace;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  padding: 2px 8px;
+  display: inline-block;
+  line-height: 1.2;
+}
+
+.stamp-ink {
+  border: 2px solid #1A1714;
+  color: #1A1714;
+  font-family: 'IBM Plex Mono', Consolas, monospace;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  padding: 2px 8px;
+  display: inline-block;
+  line-height: 1.2;
+}
+
+/* Classical Broadsheet Drop-Cap */
+.broadsheet-drop-cap::first-letter {
+  float: left;
+  font-size: 3.4rem;
+  line-height: 0.82;
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-bottom: 2px;
+  font-family: 'DM Sans', Inter, sans-serif;
+  font-weight: 600;
+  color: #1A1714;
+}
+
+/* Unbleached Newsprint Canvas Texture */
+.newsprint-canvas {
+  background-color: #E4D5BD;
+  background-image: radial-gradient(rgba(26, 23, 20, 0.035) 1px, transparent 0);
+  background-size: 20px 20px;
+}
+
+/* Parchment / Ledger Pattern */
+.parchment-pattern {
+  background-color: #E9DDC9;
+  background-image: radial-gradient(#D0BD9C 0.75px, transparent 0.75px);
+  background-size: 24px 24px;
+}
+
+/* Touchscreen Kiosk Large Targets */
+.kiosk-mode button,
+.kiosk-mode a,
+.kiosk-mode input,
+.kiosk-mode select {
+  min-height: 48px;
+  min-width: 48px;
+  font-size: 1.125rem;
+}
+
+.kiosk-mode {
+  font-size: 1.15rem;
+  user-select: none;
+}
+
+/* Archival Loading Block with Animated Rule */
+.archival-loading-bar {
+  height: 2px;
+  background-color: #1A1714;
+  position: relative;
+  overflow: hidden;
+}
+
+.archival-loading-bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 40%;
+  background-color: #6B1D1D;
+  animation: archival-slide 1.5s infinite ease-in-out;
+}
+
+@keyframes archival-slide {
+  0% { transform: translateX(-100%); }
+  50% { transform: translateX(150%); }
+  100% { transform: translateX(350%); }
+}
+
+@keyframes page-enter {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes item-enter {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes typing-caret {
+  50% { opacity: 0; }
+}
+
+.page-enter {
+  animation: page-enter 420ms ease-out both;
+}
+
+.page-item-enter {
+  animation: item-enter 420ms ease-out both;
+}
+
+.page-item-enter:nth-child(2) { animation-delay: 45ms; }
+.page-item-enter:nth-child(3) { animation-delay: 90ms; }
+.page-item-enter:nth-child(4) { animation-delay: 135ms; }
+.page-item-enter:nth-child(5) { animation-delay: 180ms; }
+.page-item-enter:nth-child(6) { animation-delay: 225ms; }
+.page-item-enter:nth-child(n+7) { animation-delay: 270ms; }
+
+.page-enter article {
+  animation: item-enter 420ms ease-out both;
+}
+
+.page-enter article:nth-of-type(2) { animation-delay: 45ms; }
+.page-enter article:nth-of-type(3) { animation-delay: 90ms; }
+.page-enter article:nth-of-type(n+4) { animation-delay: 135ms; }
+
+.typing-caret {
+  animation: typing-caret 900ms step-end infinite;
+}
+
+.prototype-ticker__track {
+  display: flex;
+  width: max-content;
+  animation: ticker-right 24s linear infinite;
+}
+
+.prototype-ticker__copy {
+  display: flex;
+  flex: 0 0 100%;
+  align-items: center;
+  width: max-content;
+  min-width: 100%;
+  padding-right: 3rem;
+  white-space: nowrap;
+}
+
+@keyframes ticker-right {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+
+button, a, select, input {
+  transition-property: color, background-color, border-color, box-shadow, transform, opacity;
+  transition-duration: 180ms;
+  transition-timing-function: ease-out;
+}
+
+.font-black,
+.font-extrabold {
+  font-weight: 650 !important;
+}
+
+.font-bold {
+  font-weight: 600;
+}
+
+/* Reduced Motion Preference (WCAG 2.1 AA) */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .prototype-ticker__track {
+    animation: none;
+    transform: none;
+  }
+
+  .prototype-ticker__copy + .prototype-ticker__copy {
+    display: none;
+  }
+}

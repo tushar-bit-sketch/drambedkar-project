@@ -1,0 +1,58 @@
+{
+  "nav": {
+    "home": "Home",
+    "search": "Search",
+    "explore": "Explore",
+    "documents": "Documents",
+    "manuscripts": "Manuscripts",
+    "speeches": "Speeches",
+    "debates": "Debates",
+    "media": "Audio/Video",
+    "timeline": "Timeline",
+    "graph": "Knowledge Graph",
+    "research": "AI Assistant",
+    "admin": "Admin Portal"
+  },
+  "search": {
+    "placeholder": "Search speeches, writings, manuscripts...",
+    "button": "Search",
+    "hybrid": "Hybrid Search",
+    "semantic": "Semantic Search",
+    "keyword": "Exact Keyword",
+    "all_types": "All Types",
+    "results_count": "archival records found",
+    "no_results": "No archival records matched your query."
+  },
+  "viewer": {
+    "original": "Original Archival Master",
+    "ocr_text": "Transcribed Text",
+    "translations": "Translations & Audio",
+    "translate_to": "Translate to:",
+    "translating": "Translating...",
+    "btn_translate": "Generate Translation",
+    "machine_translation": "Machine-Generated Translation",
+    "human_reviewed": "Human-Reviewed Translation",
+    "audio_narration": "Archival Narration (Audio)",
+    "listen": "Listen",
+    "synthesizing": "Generating Audio...",
+    "provenance": "Provenance & Verification",
+    "immutable_notice": "Original archival master remains immutable. Translations and narrations are derivative layers."
+  },
+  "research": {
+    "title": "Archival AI Research Assistant",
+    "subtitle": "Source-Grounded Inquiry over Historical Writings & Speeches",
+    "input_placeholder": "Ask a research question grounded strictly in historical evidence...",
+    "ask_btn": "Inquire",
+    "voice_btn": "Voice Query",
+    "response_language": "Answer Language:",
+    "listening": "Listening...",
+    "citations": "Archival Evidence Sources"
+  },
+  "kiosk": {
+    "mode": "Kiosk Mode",
+    "exit": "Exit Kiosk",
+    "text_size": "Text Size",
+    "contrast": "High Contrast",
+    "language": "Language"
+  }
+}
