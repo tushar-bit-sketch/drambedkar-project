@@ -1,0 +1,70 @@
+# ==============================================================================
+# Git Ignore Configuration — SIH26096 Digital Heritage Archive
+# ==============================================================================
+
+# Virtual Environments & Python Binaries
+backend/venv/
+backend/.venv/
+venv/
+.venv/
+ENV/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+*.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+.mypy_cache/
+
+# Node Packages & Build Outputs
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+dist/
+.vite/
+.npm
+.eslintcache
+
+# Environment Variables & Secrets
+.env
+.env.local
+.env.*.local
+backend/.env
+frontend/.env
+*.pem
+*.key
+
+# Temporary SQLite locks and journals
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Temporary Files, Logs & Task Telemetry
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.system_generated/
+scratch/
+backend/storage/derivatives/
+backend/storage/uploads/
+backend/storage/media/
+.agents/
+skills-lock.json
+.vercel
+frontend/.vercel
+
+# Operating System & IDE Artifacts
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

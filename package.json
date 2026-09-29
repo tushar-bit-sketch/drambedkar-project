@@ -1,0 +1,21 @@
+{
+  "name": "sih261096-monorepo",
+  "version": "1.0.0",
+  "description": "Static frontend archive catalogue",
+  "private": true,
+  "scripts": {
+    "setup": "node scripts/setup.mjs",
+    "preflight": "node scripts/preflight.mjs",
+    "verify": "node scripts/verify.mjs",
+    "dev": "npm --prefix frontend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build",
+    "preview": "npm --prefix frontend run preview",
+    "test": "npm run build && node scripts/verify.mjs",
+    "lint": "npm --prefix frontend run lint"
+  },
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0",
+    "npm": ">=10"
+  }
+}
